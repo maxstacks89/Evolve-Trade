@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolve & Trade</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://example.com/landscape-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 1em;
+      text-align: left;
+    }
+    header img {
+      height: 50px;
+      vertical-align: middle;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1em;
+      font-size: 1.2em;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    .content {
+      padding: 2em;
+      color: white;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 1em;
+    }
+    .welcome-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2em; /* Increased gap for more space */
+      padding: 0 2em; /* Padding to keep it from the edge */
+    }
+    .welcome-section img {
+      height: 120px; /* Adjusted size to fill space better */
+      max-width: 50%; /* Ensures it scales with the container */
+    }
+    .welcome-text {
+      text-align: left;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    .links {
+      margin-top: 1em;
+    }
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1em;
+    }
+    .links a:hover {
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.imgur.com/your-logo-url-here.jpg" alt="Evolve & Trade Logo">
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop Links</a>
+  </nav>
+  <div class="content" id="home">
+    <div class="welcome-section">
+      <img src="https://i.imgur.com/your-logo-url-here.jpg" alt="Evolve & Trade Logo">
+      <div class="welcome-text">
+        <h1>Welcome to Evolve & Trade</h1>
+        <p>Your premier destination for trading and evolving your collection!</p>
+      </div>
+    </div>
+  </div>
+  <div class="content" id="shop" style="display: none;">
+    <h2>Shop with Us</h2>
+    <div class="links">
+      <a href="mailto:your-email@example.com">Email</a>
+      <a href="https://www.ebay.com/your-store">eBay</a>
+      <a href="https://www.tcgplayer.com/your-store">TCGPlayer</a>
+      <a href="https://www.stockx.com/your-store">StockX</a>
+    </div>
+    <p>More links coming soon!</p>
+  </div>
+  <footer>
+    <p>&copy; 2025 Evolve & Trade. All rights reserved.</p>
+  </footer>
+  <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        document.querySelectorAll('.content').forEach(content => {
+          content.style.display = 'none';
+        });
+        document.getElementById(targetId).style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
